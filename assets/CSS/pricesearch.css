@@ -3,31 +3,96 @@
   font-size: 80%;
 }
 
+@import url(//db.onlinewebfonts.com/c/24a4b50e6d1b19606aab9c11c66535ca?family=BassetRR);
 
+@font-face {font-family: "BassetRR"; src: url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot"); 
+  src: url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot?#iefix") format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff") 
+  format("woff"), url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.ttf") format("truetype"), 
+  url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.svg#BassetRR") format("svg"); }
+
+
+
+.navbar-brand{
+
+
+}
+
+.navbar-brand h1{
+font-family: "BassetRR";
+font-size: 15rem;
+
+}
+.customNAV{
+  width: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgb(37, 1, 1),
+    rgba(150, 0, 0, 0) );  
+  background-size: cover;  
+  z-index: 10;
+       
+} 
+
+main{
+  background-image:url("../Images/cinema-strip-ga7257e7c7_1920.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+
+/* ---------- cards container ------------ */ 
+
+.cards-container {
+  width: 100% !important; 
+  height: 600px;
+  height: calc(100vh - 25px);
+  display:flex;
+  position: relative;
+  align-items: center;  /* long cards: align-items: normal */
+  justify-content: space-evenly;
+  padding: 5rem; 
+    
+}
+
+/* card divs 
+.sub-container{
+  
+} */ 
+
+
+/* ---------------------- cards ---------------- */ 
 img .supplier-logo { 
-  width: 20% ;  /* 50px */
-  height: 20%;  /* 50px */
+  width:  10% !important;
+  height: 10% ;
   background-color: white;     
   
 } 
 
 
 
-.cards-container{
-  display: flex;
-  justify-content: space-around;
-  padding: 5rem;
-  
-}
+
 
 .sub-container {
-  /* height: 20rem;   */   
-  border-color: black !important;   
+  width: 30rem;  
+  border-radius: 2rem;
+  border-color: black !important; 
+
+  align-content: space-around; 
   
 }
 
 
+/* -------------------- footer ---------------------- */
+footer{
+  height: 10rem;
+  border-top: 0.5rem;    
+  border-color: solid rgb(5, 5, 65);  
+  
+}
 
+
+/* ------------------- media Query -------------------- */ 
 
 @media screen and (max-width: 896px) {            /*(max-width: 1024px)  / 896- XR*/
  
