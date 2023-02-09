@@ -7,7 +7,8 @@ I also want to be able to store my recent searches for future references and upd
 # Description
 The Movie-Zone is a reponsive front-end application that allows the user to search movie databases for a film of their choice.
 
-When the Movie-Zone application is opened, the user can see a navigation bar with a hamburger menu *which will store their first three* searched for movies as they move through the app.
+When the Movie-Zone application is opened, the user can see a navigation bar with a hamburger menu which will eventually store their first four searched for movies as they move through the app.
+
 
 There is an invitation to type a movie title in the search box. When the search button is clicked, the movie title, a poster and a short description is displayed underneath.
 Below this information is a *button* which links to another page to display all of the details of where the user can access the movie whether it's *Netflix, Amazon, TV* etc.
