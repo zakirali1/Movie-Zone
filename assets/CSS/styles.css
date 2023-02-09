@@ -1,3 +1,70 @@
-.test {
-  color: blue;
+body {
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    to right,
+    rgba(150, 0, 0, 0),
+    rgba(46, 0, 0, 1)
+  );
+}
+#burger {
+  position: relative;
+  left: 1100px;
+  border: 3px solid whitesmoke;
+}
+
+.fixed-top {
+  margin-top: 0;
+  margin-left: 0;
+  padding: 5px;
+}
+
+.jumbotron {
+  position: relative;
+  margin-top: 10;
+  margin-left: 0;
+  margin-top: 50px;
+  border-bottom: black solid;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to left,
+    rgba(46, 0, 0, 1),
+    rgba(150, 0, 0, 0)
+  );
+}
+
+.jumbotron h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+}
+
+#search-box {
+  position: relative;
+  left: 400px;
+  width: 600px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.search-button {
+  position: relative;
+  background-color: grey;
+  border-color: darkgray;
+  margin-top: 30px;
+  left: 650px;
+  padding-right: 40px;
+}
+.search-button:hover {
+  background-color: darkgray;
+  border-color: beige;
+}
+
+.container {
+  display: grid;
+  margin: 0px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  border-right: black 20px;
+}
+
+#content {
+  border-style: double;
 }
