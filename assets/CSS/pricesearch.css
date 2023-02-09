@@ -1,3 +1,45 @@
-.test {
-  color: blue;
+
+:root{
+  font-size: 80%;
 }
+
+
+img .supplier-logo { 
+  width: 20% ;  /* 50px */
+  height: 20%;  /* 50px */
+  background-color: white;     
+  
+} 
+
+
+
+.cards-container{
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem;
+  
+}
+
+.sub-container {
+  /* height: 20rem;   */   
+  border-color: black !important;   
+  
+}
+
+
+
+
+@media screen and (max-width: 896px) {            /*(max-width: 1024px)  / 896- XR*/
+ 
+  .container {
+     flex-direction: column !important; 
+ }
+
+
+  .card {
+  width: 100% !important;
+  min-width: auto;
+  margin: 5px !important;
+  padding: 5px;
+} 
+} 
