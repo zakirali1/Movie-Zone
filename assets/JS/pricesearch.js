@@ -10,7 +10,7 @@ function watchOptions(countryAbbr, movieTitle){
         "url": "https://where-can-i-watch1.p.rapidapi.com/search/" + countryAbbr + "/" + movieTitle,
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "019e467246mshf72c997767dffd9p1eef74jsn9610ef09b9d2",
+            "X-RapidAPI-Key": "5f34861ca5mshdea1b2f878a0930p11d003jsnc7f309357993",
             "X-RapidAPI-Host": "where-can-i-watch1.p.rapidapi.com"
         }
     };
