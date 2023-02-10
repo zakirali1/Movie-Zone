@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pricerunner  </title>
 
-
+      
 
     <!-- Bootstrap CSS -->
-
+     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -21,12 +21,16 @@
      <!-- Font Awesome CSS  -->
  <script src="https://kit.fontawesome.com/2012bd63f9.js" crossorigin="anonymous"></script> <!-- my icon list -->
  <!--  This is REQUIRED for bootstrap to work correctly -->
-    
    
+ <!--  Free onlinewebfonts.com -->
+ <link href="//db.onlinewebfonts.com/c/24a4b50e6d1b19606aab9c11c66535ca?family=BassetRR" rel="stylesheet" type="text/css"/>
+
+ <!-- <link rel="stylesheet" href="./" /> --> 
+ <link rel="stylesheet" href="./assets/CSS/pricesearch.css" />
+ 
 
     
-    <link rel="stylesheet" href="./assets/CSS/pricesearch.css" />
-     <!-- <link rel="stylesheet" href="./" /> -->    
+
 
 
 </head>
@@ -37,9 +41,9 @@
     <header>
 
         <!-- ----------------------- NAVBAR ------------------------------------------------------------  -->    
-        <nav class="navbar bg-body-tertiary  bg-dark"  >    <!-- or lighter tone -  style="background-color: #e3f2fd;"   -->
+        <nav class="navbar customNAV bg-body-tertiary "  >    <!-- or lighter tone -  style="background-color: #e3f2fd;"   -->
             <div class="container-fluid justify-content-center ">
-            <span class="navbar-brand bg-light m-5 h1"> Top Gun Maverick </span> <!-- movie title section -->   <!-- bg-light will be removed after styling -->
+            <span class="navbar-brand m-5"> <h1>Top Gun Maverick</h1> </span> <!-- movie title section -->   <!-- bg-light will be removed after styling -->
             </div>
         </nav>
         <!-- ----------------------- NAVBAR end  ------------------------------------------------------------  -->   
@@ -49,56 +53,64 @@
 
 <!-- -----------------------------  Main content      -   cards    ---------------------------------    -->
     <main>
+        
 
-        <section class="container cards-container" >
+        <div class="container cards-container"  >
 
-            <!-- Single card -->
+            <!-- -------------------- Single card --------------------------------- -->
 
-            <div class="card container sub-container col-lg-3 col-md-3 col-sm-12 ">
+            <div class="card container sub-container  col-lg-6 col-md-6 col-sm-6  shadow-lg " style="width: 100%"; >
 
                 
-                <div class="card-title movie-supplier"> Movie distributor: Netflix </div>
+                <div class="card-title  h2 movie-supplier stream "> Movie provider: ITV Hub </div>
+                <!-- Chose dinamically first one from options and change name to match key parameter "privider" -->
 
-                <img class="supplier-logo" src="./assets/Images/maverickplaceholder.jpg" >  Logo, or Icon    </img>
+                <img class="supplier-logo" src="./assets/Images/award-gc743e3fdf_1920.jpg" >     </img>
 
               
 
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">First item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item h5 ">Option: Stream </li>
+                    <!-- Chose dinamically key and change parameter "option" -->
+                    <li class="list-group-item h5">Pricing: </li>
+                    <!-- Chose dinamically key and change parameter "pricing" -->
+                    <li class="list-group-item h5 ">Provider URL: </li>
+                    <!-- Chose dinamically key and add value as txt/link -->
                 </ul>
 
                 <div class="card-body">
-                    <a href="#" class="card-link">Movie link</a>
-                    <a href="#" class="card-link">Movie link</a>
+                    <a href="#Provider URL" class="btn btn-success btn-floating card-link">Stream Now</a>
+                    <!-- Link Button - on click load href on new page -->
+                    <a href="#" class=" btn btn-info btn-floating card-link"> Return to Home </a>
+                    <!-- Link Button - on click return to previous page (?)  -->
                 </div>
 
               </div>
             
 
-            <!-- Single card end -->
+            <!-- ------------------------ Single card end ----------------------- -->
 
 
 
             <!-- Single card 2 -->
 
-            <div class="card container sub-container col-lg-3 col-md-3 col-sm-12 ">
+            <div class="card container sub-container col-lg-6 col-md-6 col-sm-6 shadow-lg">
 
                 
-                <div class="card-title movie-supplier"> Movie distributor: Netflix </div>
+                <div class="card-title movie-supplier h2" > Movie provider: Amazon Video </div> 
+                
 
-                <img class="supplier-logo" src="./assets/Images/maverickplaceholder.jpg" >  Logo, or Icon    </img>
+                <img class="supplier-logo" src="./assets/Images/award-gc743e3fdf_1920.jpg" >      </img>
 
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">First item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item h5 "> Option: Rent </li>
+                    <li class="list-group-item h5 ">Pricing: </li>
+                    <li class="list-group-item h5 "> Provider URL: </li>
                 </ul>
 
                 <div class="card-body">
-                    <a href="#" class="card-link">Movie link</a>
-                    <a href="#" class="card-link">Movie link</a>
+                    <a href="#" class="btn btn-success btn-floating card-link">Rent Now</a>
+                    <a href="#" class="btn btn-info  btn-floating card-link">Return to Home </a>
                 </div>
                 
                 
@@ -107,6 +119,33 @@
 
             <!-- Single card 2 end -->
 
+                    <!-- Single card 3 -->
+
+                    <div class="card container sub-container col-lg-6 col-md-6 col-sm-6 shadow-lg ">
+
+            
+                    <div class="card-title movie-supplier h2 "> Movie provider: Amazon Video </div> 
+                    
+    
+                    <img class="supplier-logo" src="./assets/Images/award-gc743e3fdf_1920.jpg" >    </img>
+    
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item h5 ">Option: Buy </li>
+                        <li class="list-group-item h5 ">Pricing: </li>
+                        <li class="list-group-item h5"> Provider URL: </li>
+                    </ul>
+    
+                    <div class="card-body">
+                        <a href="#" class="btn btn-success btn-floating card-link">Buy Now</a>
+                        <a href="#" class="btn btn-info btn-floating card-link ">Return to Home </a>
+                    </div>
+                    
+                    
+    
+                </div>
+    
+                <!-- Single card 3 end -->
+
 
 
             
@@ -115,21 +154,21 @@
 
 
 
-        </section>         
+        </div>         
 
 
     </main>
 
 <!-- -------------------------------- footer ----------------------------------------------  -->
-    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <footer class="text-center text-white" >
 
         <a
-              class="btn btn-link btn-outline-secondary btn-floating btn-lg text-dark m-1" 
+              class="btn btn-link btn-outline-secondary btn-floating btn-lg  shadow-lg text-dark m-1" 
               href="#"
               target="_blank"
               role="button"
               data-mdb-ripple-color="dark"
-              ><i class="fa fa-github"> Github</i
+              ><i class="fa fa-github "> Github</i
             ></a> 
 
 

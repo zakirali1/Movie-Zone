@@ -2,37 +2,116 @@
 :root{
   font-size: 80%;
 }
+ /* additional fonts for title display */ 
+@import url(//db.onlinewebfonts.com/c/24a4b50e6d1b19606aab9c11c66535ca?family=BassetRR);
+
+@font-face {font-family: "BassetRR"; src: url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot"); 
+  src: url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot?#iefix") format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff") 
+  format("woff"), url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.ttf") format("truetype"), 
+  url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.svg#BassetRR") format("svg"); }
+
+  /* additional fonts for title display end */ 
+
+/* -------------- NAV container ------------------ */ 
+.navbar-brand{
 
 
+}
+
+.navbar-brand h1{
+font-family: "BassetRR";
+font-size: 700%;
+
+}
+.customNAV{
+  width: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgb(233, 75, 7),
+    rgba(224, 83, 18, 0.437) );  
+  background-size: cover;  
+  z-index: 10;
+       
+} 
+
+/* -------------- NAV container  end ------------------ */ 
+
+main{
+  background-image:url("../Images/sunset-g020ebf7f3_1920.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+
+/* ---------- cards container ------------ */ 
+
+.cards-container {
+  width: 80% !important; 
+  column-gap: 5%;
+  height: 600px;
+  height: calc(100vh - 25px);
+  display:flex;
+  position: relative;
+  align-items: center;  /* long cards: align-items: normal */
+  justify-content: space-evenly;
+  padding: 5rem; 
+    
+}
+
+
+
+/* card divs 
+.sub-container{
+  
+} */ 
+
+
+/* ---------------------- cards ---------------- */ 
 img .supplier-logo { 
-  width: 20% ;  /* 50px */
-  height: 20%;  /* 50px */
+  width:  10% !important;
+  height: 10% ;
   background-color: white;     
   
 } 
 
 
 
-.cards-container{
-  display: flex;
-  justify-content: space-around;
-  padding: 5rem;
-  
-}
+
 
 .sub-container {
-  /* height: 20rem;   */   
-  border-color: black !important;   
+  width: 30rem;  
+  border-radius: 2rem;
+  border-color: black !important; 
+
+  align-content: space-around; 
   
 }
 
 
+/* -------------------- footer ---------------------- */
+footer{
+  height: 10rem;
+  background-color: rgba(242, 105, 19, 0.952);
+  border-top: 0.5rem;    
+  border-color: solid rgba(190, 66, 8, 0.618);  
+  
+}
 
 
-@media screen and (max-width: 896px) {            /*(max-width: 1024px)  / 896- XR*/
+/* ------------------- media Query -------------------- */ 
+
+@media screen and (max-width: 1024px) {            /*  / 896- XR*/
  
+  .navbar-brand h1{
+    
+    font-size: 300%;
+    
+    }
+
   .container {
      flex-direction: column !important; 
+     nav-down: auto;
  }
 
 
