@@ -26,22 +26,48 @@ body {
 .navbar {
   padding-left: 50px;
   padding-right: 100px;
+  border-radius: 10px;
 }
-
+.search {
+  border-radius: 20%;
+  box-shadow: left 1px 1px 2px grey;
+  background-color: black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: whitesmoke;
+  border-color: whitesmoke;
+}
+.search:hover {
+  background-color: black !important;
+  border-color: whitesmoke;
+  width: 150px;
+}
 .jumbotron {
-  /*justify-content: center;*/
   color: white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding-top: 20px;
   padding-bottom: 30px;
-  box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.50);
+  box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.5);
   margin-bottom: 300px;
 }
 
 .jumbotron h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
+}
+
+.button5 {
+  right: 200px;
+  margin-right: 50px;
+  border-radius: 70%;
+  box-shadow: left 1px 1px 2px grey;
+  background-color: black;
+}
+
+.button5:hover {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  transform: scale(1.2);
 }
 
 /*.jumbotron {
@@ -113,4 +139,3 @@ h1 {
 #content {
   border-style: double;
 }
-
