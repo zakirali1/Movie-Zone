@@ -10,8 +10,8 @@ let result;
 function getMovie(movieTitle){
 
   // $("#container").empty();
-  $("#content").empty();
-  $("#movie-details").empty();
+  // $("#content").empty();
+  $("#wrapper").empty();
     var queryURL = "https://www.omdbapi.com/?t=" + movieTitle + "&apikey=trilogy";
 
  $.ajax({
@@ -21,22 +21,19 @@ function getMovie(movieTitle){
     console.log(response);
 
     result = response;
-    console.log(response);
-    // $("#title").text(response.Title)
-    let titles = $("<h1>").text(response.Title)
-    let poster = $("<img>").attr("src", response.Poster);
-    // console.log(poster)
-    // console.log(response.Plot)
 
     console.log(response.Ratings[0].Source)
     
-    // $("#movie-details").append(poster, header,p,rating);
-    let header = $("<h2>").text("Plot: ")
-    let p = $("<p>").text(response.Plot);
-    let rating = $("<p>").text("Rating: " + response.Rated);
-    let score = $("<p>").text("IMDB: " + response.Ratings[0].Source)
-    // desc.prepend(header,p,rating);
-    $("#movie-details").append(titles,poster, header,p,rating);
+    // creating dynamic elements
+ let div1 = $("<div>").attr("id", "movie-details");
+ let head = $("<h5>").addClass("card-title").attr("id", "movie-title").text(response.Title);
+ let poster = $("<img>").addClass("card-image-top").attr("src", response.Poster);
+
+//  appending dynamic elements to movie-title attribute
+ $("#movie-details").prepend(head, poster)
+    $("#wrapper").append(div1)
+   
+    // call get ratings func
     getRating(response)
 
 
@@ -45,25 +42,28 @@ function getMovie(movieTitle){
 
 const getRating = response => {
 
-  console.log(response)
+  // dynamically creating tags and attributes below
+
+ let contentDiv = $("<div>").attr("id", "content");
+
+  let header = $("<h2>").text("Plot: ")
+  let p = $("<p>").text(response.Plot);
+  let rating = $("<p>").text("Rating: " + response.Rated);
+  $("#content").append(header, p, rating);
+ 
   for (let i = 0; i < response.Ratings.length; i++) {
 
   let source = $("<p>").text(response.Ratings[i].Source)
   let val = $("<p>").text(response.Ratings[i].Value)
-  $("#content").append(source,val)
-}
+  $("#content").append(source,val);
+  
 
-}
+};
 
+$("#wrapper").append(contentDiv);
 
+};
 
-// getMovie(movieTitle);
-
-const dynamicEl = (movie) => {
-
-  $("#title").text(movie.Title)
-
-}
 
 // click function to callback getMovie function
 
@@ -77,4 +77,4 @@ $(".search-button").on('click', function(event){
   // localStorage.setItem("searchInput", userInput);
   getMovie(userInput);
 
-})
+});
