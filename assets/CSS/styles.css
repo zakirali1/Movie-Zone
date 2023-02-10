@@ -1,24 +1,50 @@
-body {
+/*body {
   overflow-x: hidden;
   background-image: linear-gradient(
     to right,
     rgba(150, 0, 0, 0),
     rgba(46, 0, 0, 1)
   );
-}
+}*/
+/*
 #burger {
   position: relative;
   left: 1100px;
   border: 3px solid whitesmoke;
-}
+}*/
 
-.fixed-top {
+/*.fixed-top {
   margin-top: 0;
   margin-left: 0;
   padding: 5px;
+}*/
+
+body {
+  margin-top: 50px;
+}
+
+.navbar {
+  padding-left: 50px;
+  padding-right: 100px;
 }
 
 .jumbotron {
+  /*justify-content: center;*/
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.50);
+  margin-bottom: 300px;
+}
+
+.jumbotron h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+}
+
+/*.jumbotron {
   position: relative;
   margin-top: 10;
   margin-left: 0;
@@ -30,13 +56,25 @@ body {
     rgba(46, 0, 0, 1),
     rgba(150, 0, 0, 0)
   );
+}*/
+
+/*couldn't get bg-image to work in this external css sheet so placed it as an inline style */
+.bg-image {
+  background-image: url("./assets/Images/screenbg.jpg");
+  height: 600px;
+  background-attachment: static;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.jumbotron h1 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  text-align: center;
+h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 900;
 }
 
+/*
 #search-box {
   position: relative;
   left: 400px;
@@ -51,20 +89,28 @@ body {
   margin-top: 30px;
   left: 650px;
   padding-right: 40px;
-}
+}*/
+/*
 .search-button:hover {
   background-color: darkgray;
   border-color: beige;
 }
+*/
+
+.search-button {
+  padding-top: 15px;
+}
 
 .container {
   display: grid;
-  margin: 0px;
+  margin-top: 100px;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
   border-right: black 20px;
+  color: black;
 }
 
 #content {
   border-style: double;
 }
+
