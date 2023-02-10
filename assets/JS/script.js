@@ -63,11 +63,8 @@ const getRating = response => {
 
 $("#wrapper").append(contentDiv);
 
-const dynamicEl = (movie) => {
+};
 
-  $("#title").text(movie.Title)
-
-}
 
 // click function to callback getMovie function
 
@@ -75,13 +72,13 @@ $(".search-button").on('click', function(event){
 
   event.preventDefault();
   let userInput = $("#search-box").val().trim();
-  let userInputYear = $("#search-year").val().trim();
-  console.log(userInput);
-  console.log(userInputYear);
+  // let userInputYear = $("#search-year").val().trim();
+  // console.log(userInput);
+  // console.log(userInputYear);
 
   // saving user input to local storage for manipulation later
    localStorage.setItem("searchInput", userInput);
-   localStorage.setItem("searchYear", userInputYear),
+  //  localStorage.setItem("searchYear", userInputYear),
   getMovie(userInput);
 
 });
