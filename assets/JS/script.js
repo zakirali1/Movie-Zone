@@ -50,13 +50,19 @@ const getRating = response => {
   let header = $("<h2>").text("Plot: ")
   let p = $("<p>").text(response.Plot);
   let rating = $("<p>").text("Rating: " + response.Rated);
+  let like = $("<button>").attr("id", "thumbsUp");
+  let thumbsUp = $("<i>").addClass("far fa-thumbs-up").attr("id", "thumbsU");
+  like.append(thumbsUp)
+  let unlike = $("<button>").attr("id", "thumbsDown");
+  let thumbsDown = $("<i>").addClass("far fa-thumbs-down").attr("id", "thumbsD")
+  unlike.append(thumbsDown)
   $("#content").append(header, p, rating);
  
   for (let i = 0; i < response.Ratings.length; i++) {
 
   let source = $("<p>").text(response.Ratings[i].Source)
   let val = $("<p>").text(response.Ratings[i].Value)
-  $("#content").append(source,val);
+  $("#content").append(source,val, like, unlike);
   
 
 };
@@ -89,4 +95,20 @@ $(".search-button").on('click', function(event){
 
   getMovie(userInput);
 
+});
+
+$(document).on("click", "#thumbsUp", function(e) {
+  if($("#thumbsU").hasClass("far fa-thumbs-up")) {
+    $("#thumbsU").removeClass().addClass("fas fa-thumbs-up");
+  } else {
+    $("#thumbsU").removeClass().addClass("far fa-thumbs-up");
+  }
+});
+
+$(document).on("click", "#thumbsDown", function(e) {
+  if($("#thumbsD").hasClass("far fa-thumbs-down")) {
+    $("#thumbsD").removeClass().addClass("fas fa-thumbs-down");
+  } else {
+    $("#thumbsD").removeClass().addClass("far fa-thumbs-down");
+  }
 });
