@@ -6,7 +6,7 @@
 let title = $("#movieTitle")
 let desc = $("#content");
 let result;
-//var releaseYear = "2022 ";
+
 
 function getMovie(movieTitle){
 
@@ -71,13 +71,11 @@ $(".search-button").on('click', function(event){
 
   event.preventDefault();
   let userInput = $("#search-box").val().trim();
-  let userInputYear = $("#search-year").val().trim();
   console.log(userInput);
-  console.log(userInputYear);
+  
 
   // saving user input to local storage for manipulation later
    localStorage.setItem("searchInput", userInput);
-   localStorage.setItem("searchYear", userInputYear),
   getMovie(userInput);
 
 })
