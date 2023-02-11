@@ -56,7 +56,7 @@ const getRating = response => {
   let unlike = $("<button>").attr("id", "thumbsDown");
   let thumbsDown = $("<i>").addClass("far fa-thumbs-down").attr("id", "thumbsD")
   unlike.append(thumbsDown)
-  $("#content").append(header, p, rating,);
+  $("#content").append(header, p, rating);
  
   for (let i = 0; i < response.Ratings.length; i++) {
 
