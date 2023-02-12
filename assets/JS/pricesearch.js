@@ -41,7 +41,8 @@ if(movieTitle !== " " || movieTitle !== null){
                     )
                     {
                     ///DISPLAYING MOVIE TITLE
-                    $("#movie-title").text(movieTitleFound + " " + movieYear); 
+                    $("#movie-title").text(movieTitleFound); 
+                    $("#movie-year").text(movieYear);
 
                     ////DISPLAYING BUY OPTION LOGIC
                     console.log(options);
