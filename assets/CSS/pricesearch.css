@@ -22,8 +22,14 @@
 .navbar-brand h1{
 font-family: "BassetRR";
 font-size: 700%;
-
 }
+
+#movie-year{
+font-family: "BassetRR";
+font-size: 400%;
+}
+
+
 .customNAV{
   width: 100%;
   background-image: linear-gradient(
@@ -121,4 +127,18 @@ footer{
   margin: 5px !important;
   padding: 5px;
 } 
-} 
+}
+
+
+@media screen and (max-width:576px){
+  .navbar-brand h1{
+    font-family: "BassetRR";
+    font-size:xx-large ;
+     }
+    
+    #movie-year{
+    font-family: "BassetRR";
+    font-size: large;
+     }
+
+}
