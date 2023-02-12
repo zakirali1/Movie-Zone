@@ -41,6 +41,13 @@ body {
   border-color: whitesmoke;
   width: 150px;
 }
+
+#search-box {
+  position: relative;
+  max-width: 350px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
 .jumbotron {
   color: white;
   border-bottom-left-radius: 10px;
@@ -56,6 +63,12 @@ body {
   text-align: center;
 }
 
+.form-position {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+/*
 .button5 {
   right: 200px;
   margin-right: 50px;
@@ -69,7 +82,7 @@ body {
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
   transform: scale(1.2);
 }
-
+*/
 /*.jumbotron {
   position: relative;
   margin-top: 10;
@@ -124,6 +137,12 @@ h1 {
 */
 
 .search-button {
+  background-color: black;
+  border-width: 1px;
+  border-color: white;
+}
+
+.search-para {
   padding-top: 15px;
 }
 
@@ -138,4 +157,9 @@ h1 {
 
 #content {
   border-style: double;
+}
+
+.card {
+  margin-top: 100px;
+  color: black
 }
