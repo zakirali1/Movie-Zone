@@ -62,8 +62,8 @@ main{
     
 }
 
-.btn{
-  cursor: pointer;
+.btn {
+  cursor: pointer !important;  
 }
 
 
@@ -173,10 +173,9 @@ footer{
 
      .card {
       flex-basis: 80%;  
-      
-      
-    
     } 
+
+    
 
     
 
