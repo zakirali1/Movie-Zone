@@ -27,13 +27,13 @@
   <body>
         <!--nav bar-->
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-      <button class="button button5">
+      <button class="button button5" data-country="India">
         <img src="./assets/Images/india.png" width="50px" />
       </button>
-      <button class="button button5">
+      <button class="button button5" data-country="UK">
         <img src="./assets/Images/united-kingdom.png" width="50px" />
       </button>
-      <button class="button button5">
+      <button class="button button5" data-country="US">
         <img src="./assets/Images/united-states.png" width="50px" />
       </button>
       <!-- <a class="navbar-brand" href="index1.html">Movie Zone</a> -->
@@ -96,10 +96,10 @@
 
   <h1 class="display-4">Choose Your Movie</h1>
     
-    <div class="">
+    <div class="form-position">
      <input class="form-control form-control-md" id="search-box" type="text" placeholder="Enter your movie title..." name="search">
-    <p class="search-button">
-    <button class="btn  btn-primary btn-lg search-button search" type="submit"><i class="fa fa-search">Search</i></button>
+    <p class="search-para">
+    <button class="btn  btn-primary btn-lg search-button search btn-dark" type="submit"><i class="fa fa-search">Search</i></button>
     </p>
   </div>
 
@@ -131,17 +131,25 @@
 
     
     <!-- movie section -->
-    <div class="container" id="wrapper">
+    <!--<div class="container" id="wrapper">-->
 
-      <!-- removed div elements below, as they will be dynamically created with Javascript, left here for reference -->
-        <!-- <div id="movie-details">
-            <h5 class="card-title" id="movie-title">Movie title</h5>
-            <img class="card-img-top" src="./PvnA3o.jpg" alt="Card image cap">
+      <div class="card mb-3 border-dark" id="wrapper">
+
+        <!-- this section will now be produced dynamically. please load page and view on click, left here for reference -->
+         <!-- <div class="row no-gutters rowContent">
+          <div class="col-md-4">
+            <img class="card-img-top" src="./assets/Images/PvnA3o.jpg" alt="Card image cap">
+          </div> --> 
+          <!-- <div class="col-md-8">
+            <div class="card-body">
+              <h4 class="card-title">Movie Title</h4>
+              <p class="card-text">Film description goes here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate amet beatae incidunt commodi nam officiis, fugiat nihil eveniet sapiente quaerat quo possimus, nesciunt facilis perferendis error autem molestias, itaque eaque.</p>
+              <p class="card-button"><button type="button" class="btn-sm btn-primary">Watch Now</button></p>
+            </div>
+          </div>
         </div> -->
-         <!-- <div id="content">
-            <div></div>
-        </div> --> 
-        </div> 
+      </div>
+        <!--</div>-->
       
       <br>
     
