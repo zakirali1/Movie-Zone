@@ -67,11 +67,6 @@ main{
 }
 
 
-/* card divs 
-.sub-container{
-  
-} */ 
-
 
 /* ---------------------- cards ---------------- */ 
 img .supplier-logo { 
@@ -97,11 +92,22 @@ img .supplier-logo {
 
 /* -------------------- footer ---------------------- */
 footer{
-  height: 10rem;
+  
   background-color: rgba(242, 105, 19, 0.952);
   border-top: 0.5rem;    
   border-color: solid rgba(190, 66, 8, 0.618);  
   
+}
+
+.footer-cards-container {
+ 
+  column-gap: 5%; 
+  display:flex;
+  position: relative;
+  align-items: center; 
+  justify-content: space-evenly;
+  padding: 0,5rem;
+    
 }
 
 
@@ -149,6 +155,28 @@ footer{
       align-items: center;
 
      }
+
+     .cards-container {
+      justify-content:normal; 
+      height: auto;
+  
+     }
+
+     .footer-cards-container{
+      justify-content:normal; 
+     }
+
+
+     .sub-container{
+     width: 25rem;
+     }
+
+     .card {
+      flex-basis: 80%;  
+      
+      
+    
+    } 
 
     
 
