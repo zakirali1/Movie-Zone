@@ -1,4 +1,3 @@
-
 body {
   margin-top: 50px;
 }
@@ -42,7 +41,6 @@ body {
   float: none;
 }
 
-
 /*couldn't get bg-image to work in this external css sheet so placed it as an inline style */
 .bg-image {
   background-image: url("./assets/Images/screenbg.jpg");
@@ -78,5 +76,20 @@ h1 {
 
 .card {
   margin-top: 100px;
-  color: black
+  color: black;
+}
+
+/* modal param */
+
+.modal-btn {
+  background-color: black;
+  border-width: 1px;
+  border-color: white;
+}
+
+.modal-content {
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
