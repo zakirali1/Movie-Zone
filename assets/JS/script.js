@@ -9,6 +9,7 @@ let favs = JSON.parse(localStorage.getItem("favourites")) || [];
 let title = $("#movieTitle");
 let desc = $("#content");
 let result;
+let currentVal;
 
 function getMovie(movieTitle) {
   // $("#container").empty();
@@ -148,7 +149,12 @@ $(document).on("click", "#thumbsUp", function (e) {
     $("#thumbsU").removeClass().addClass("fas fa-thumbs-up");
     // favs.push(userIn)
     // localStorage.setItem("favourites", JSON.stringify(favs))
-    voteUp(userIn)
+    if (userIn) {
+      voteUp(userIn) 
+
+    } else if((currentVal))
+    voteUp(currentVal)
+
   } else {
     $("#thumbsU").removeClass().addClass("far fa-thumbs-up");
     // favs.splice(userIn, 1)
@@ -164,7 +170,11 @@ $(document).on("click", "#thumbsDown", function (e) {
 
   if ($("#thumbsD").hasClass("far fa-thumbs-down")) {
     $("#thumbsD").removeClass().addClass("fas fa-thumbs-down");
-   voteDown(userIn) 
+    if (userIn) {
+      voteDown(userIn) 
+
+    } else if((currentVal))
+    voteDown(currentVal)
    
   } else {
     $("#thumbsD").removeClass().addClass("far fa-thumbs-down");
@@ -197,7 +207,7 @@ const voteUp = userVal => {
     favs.push(userVal)
     localStorage.setItem("favourites", JSON.stringify(favs))
     console.log(favs)
-
+    location.reload();
   }
   
 };
@@ -208,7 +218,7 @@ const voteDown = userVal => {
    let where = favs.indexOf(userVal)
    favs.splice(where, 1)
    localStorage.setItem("favourites", JSON.stringify(favs))
-   
+   location.reload();
    
     }
   };
@@ -225,14 +235,27 @@ const voteDown = userVal => {
         dropItems =  $("<a>").addClass("dropdown-item").attr("href", "#").text(element)
         dropmenu.append(dropItems)
         console.log(favs)
+        
     })
   
-  
+    
 };
 
 
 });
 
+
+$(document).on("click", ".dropdown-menu .dropdown-item", function(event) {
+  event.preventDefault()
+
+    currentVal = $(this).text().trim()
+    console.log(currentVal)
+  
+    getMovie(currentVal);
+    
+
+
+})
 
 
 // dropFunc();
