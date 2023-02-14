@@ -1,5 +1,16 @@
-var countryAbbr = "uk";
+var countryAbbr = (localStorage.getItem("country")).toLowerCase();
 var movieTitle = localStorage.getItem("searchInput");
+countryChosen;
+
+///CONVERT THE STRING INDIA TO 2 CHARACHER VALUE
+if(countryAbbr == "india"){
+    var  countryChosen = "in"
+}else{
+    var countryChosen = countryAbbr;
+}
+console.log(countryChosen);
+
+
 
 if(movieTitle !== " " || movieTitle !== null){
     $(".cards-container").attr("hidden", false);
@@ -7,27 +18,24 @@ if(movieTitle !== " " || movieTitle !== null){
     watchOptions(countryAbbr, movieTitle);
 
     ////FUNCTION TO SEARCH OPTIONS FOR BUY RENT OR STREAM FROM RAPID API
-    function watchOptions(countryAbbr, movieTitle){
+    function watchOptions(countryChosen, movieTitle){
 
         const settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://where-can-i-watch1.p.rapidapi.com/search/" + countryAbbr + "/" + movieTitle,
+            "url": "https://where-can-i-watch1.p.rapidapi.com/search/" + countryChosen + "/" + movieTitle,
             "method": "GET",
             "headers": {
-                "X-RapidAPI-Key": "3691323da3msha52c600432c258ep1e24aejsnfa409556ee45",
+                "X-RapidAPI-Key": "c628dd4553mshf06c082ec4e32f3p15c1d3jsnf0c281a0098d",
                 "X-RapidAPI-Host": "where-can-i-watch1.p.rapidapi.com"
             }
         };
         $.ajax(settings).done(function (movieData) {
 
-            console.log(movieData);
-
             for(let t = 0; t < movieData.length; t++){
 
                 var movieTitleFound = movieData[0].title;
                 var movieYear = movieData[0].year;
-                var options = movieData[0].options;
                 var buyOption = movieData[0].options.buy;
                 var rentOption = movieData[0].options.rent;
                 var streamOption = movieData[0].options.stream;
@@ -45,7 +53,6 @@ if(movieTitle !== " " || movieTitle !== null){
                     $("#movie-year").text(movieYear);
 
                     ////DISPLAYING BUY OPTION LOGIC
-                    console.log(options);
                     if(buyOption){
                         $("#buy-card").attr("hidden", false);
                         
@@ -132,7 +139,8 @@ if(movieTitle !== " " || movieTitle !== null){
             };
         });
     };
-}else{
+}
+else{
     noMovieFound();
 }
 
@@ -140,3 +148,4 @@ function noMovieFound(){
     $("#movie-title").text("whoops! Nothing to Display");
     $(".cards-container").attr("hidden", true);
 }
+ 
