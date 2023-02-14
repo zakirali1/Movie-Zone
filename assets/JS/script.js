@@ -2,6 +2,10 @@
 
 ////FUNCTION TO GET SEARCHED MOVIE USING OMDB-API
 
+let favs = JSON.parse(localStorage.getItem("favourites")) || [];
+
+
+
 let title = $("#movieTitle");
 let desc = $("#content");
 let result;
@@ -21,6 +25,8 @@ function getMovie(movieTitle) {
     result = response;
 
     console.log(response.Ratings[0].Source);
+
+    localStorage.setItem("Year", response.Year)
 
     // <div class="row no-gutters">
     let div2 = $("<div>").addClass("row no-gutters rowContent");
@@ -129,23 +135,43 @@ $(".search-button").on("click", function (event) {
   getMovie(userInput);
 });
 
+// let favs = JSON.parse(localStorage.getItem("favourites")) || [];
+
 $(document).on("click", "#thumbsUp", function (e) {
+
+  let userIn = $("#search-box")
+  .val()
+  .toLowerCase()
+  .trim()
+
   if ($("#thumbsU").hasClass("far fa-thumbs-up")) {
     $("#thumbsU").removeClass().addClass("fas fa-thumbs-up");
+    // favs.push(userIn)
+    // localStorage.setItem("favourites", JSON.stringify(favs))
+    voteUp(userIn)
   } else {
     $("#thumbsU").removeClass().addClass("far fa-thumbs-up");
+    // favs.splice(userIn, 1)
   }
 });
 
 $(document).on("click", "#thumbsDown", function (e) {
+ 
+  let userIn = $("#search-box")
+  .val()
+  .toLowerCase()
+  .trim()
+
   if ($("#thumbsD").hasClass("far fa-thumbs-down")) {
     $("#thumbsD").removeClass().addClass("fas fa-thumbs-down");
+   voteDown(userIn) 
+   
   } else {
     $("#thumbsD").removeClass().addClass("far fa-thumbs-down");
   }
 });
 
-$(".button5").on("click", function (e) {
+$(".button5").on("click", function(e) {
   // $(this).data("country");
 
   let country = $(this).data("country");
@@ -159,3 +185,54 @@ $(document).on("click", ".click-me", function (e) {
 });
 
 // modal logic
+
+
+
+const voteUp = userVal => {
+  if (!favs.includes(userVal)) {
+    favs.push(userVal)
+    localStorage.setItem("favourites", JSON.stringify(favs))
+    console.log(favs)
+
+  }
+  
+};
+
+const voteDown = userVal => {
+
+    if(favs.includes(userVal)) {
+   let where = favs.indexOf(userVal)
+   favs.splice(where, 1)
+   localStorage.setItem("favourites", JSON.stringify(favs))
+   
+   
+    }
+  };
+
+ 
+
+  $(document).on("click", ".dropl", function() {
+    let moviesL =  JSON.parse(localStorage.getItem("favourites"))
+    // event.preventDefault()
+    if($(this).hasClass(`show`)) {
+      
+      let dropmenu = $(".dropdown-menu.show");
+      moviesL.forEach(element => {
+        dropItems =  $("<a>").addClass("dropdown-item").attr("href", "#").text(element)
+        dropmenu.append(dropItems)
+        console.log(favs)
+    })
+  
+  
+};
+
+
+});
+
+
+
+// dropFunc();
+ 
+
+// $(".dropdown-toggle").on("click", dropFunc);
+
