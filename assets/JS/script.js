@@ -151,11 +151,12 @@ $(".button5").on("click", function (e) {
   let country = $(this).data("country");
   // console.log(this.dataset.country)
 
-  localStorage.setItem("country", JSON.stringify(country));
+  localStorage.setItem("country", country);
 });
 
 $(document).on("click", ".click-me", function (e) {
-  window.location.href = "../../pricesearch.html";
+ // window.location.href = "../../pricesearch.html";
+ window.open("./pricesearch.html");
 });
 
 // modal logic
