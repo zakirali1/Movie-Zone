@@ -185,9 +185,9 @@ $(document).on("click", ".click-me", function (e) {
  window.open("./pricesearch.html");
 });
 
-<<<<<<< HEAD
+
 // modal logic
-=======
+
 // modal logic
 
 
@@ -240,4 +240,4 @@ const voteDown = userVal => {
 
 // $(".dropdown-toggle").on("click", dropFunc);
 
->>>>>>> origin
+
