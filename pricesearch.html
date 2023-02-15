@@ -29,10 +29,27 @@
             <!-- ----------------------- NAVBAR ------------------------------------------------------------  -->    
            
             <nav class="navbar customNAV bg-body-tertiary"  >    <!-- or lighter tone -  style="background-color: #e3f2fd;"   -->
+                <a class="navbar-brand " href="#"> 
+                    <button type="button" class="btn text-dark"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house-heart-fill" viewBox="0 0 16 16">
+                            <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707L7.293 1.5Z"></path>
+                            <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9.293Zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018Z"></path>
+                        </svg>
+                        
+                    </button>                         
+                    
+                    
+                </a>
+                
                 <div class="container-fluid justify-content-center">
                 <span class="navbar-brand m-5"> 
+                    
+
                     <h1 id="movie-title"> </h1> 
                     <h3 id="movie-year"> </h3>
+
+
+                   
                 
                 </span> <!-- movie title section -->   
                 </div>
@@ -45,7 +62,7 @@
         <div class="container cards-container" hidden>
 
             <!-- -------------------- Single card --------------------------------- -->
-            <div id="stream-card" hidden class="card container sub-container  col-lg-6 col-md-6 col-sm-6  shadow-lg ">
+            <div id="stream-card" hidden  class="card container sub-container  col-lg-6 col-md-6 col-sm-6  shadow-lg ">
 
                 <div class="card-title  h2 movie-supplier-stream "></div>
                 <!-- Chose dinamically first one from options and change name to match key parameter "privider" -->
@@ -62,9 +79,14 @@
                 </ul>
 
                 <div class="card-body">
-                    <a href="#" class="btn btn-success btn-floating card-link" id="stream-now-btn">Stream Now</a>
+                    <a href="#" class="btn btn-success btn-floating card-link" id="stream-now-btn">
+                        <i class="fa fa-film" aria-hidden="true"> </i>
+                         Stream Now
+                        </a>
                     <!-- Link Button - on click load href on new page -->
-                    <a href="#" class=" btn btn-info btn-floating card-link home-btn"> Return to Home </a>
+                    <a href="#" class=" btn btn-info btn-floating card-link home-btn">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        Movie-Zone </a>
                     <!-- Link Button - on click return to previous page  -->
                 </div>
             </div>
@@ -84,8 +106,12 @@
                 </ul>
 
                 <div class="card-body">
-                    <a href="#" type="button" class="btn btn-success btn-floating card-link" id="rent-now-btn">Rent Now</a>
-                    <a href="#" type="button" class="btn btn-info  btn-floating card-link home-btn">Return to Home </a>
+                    <a href="#" type="button" class="btn btn-success btn-floating card-link" id="rent-now-btn">
+                        <i class="fa fa-film" aria-hidden="true"> </i>
+                        Rent Now</a>
+                    <a href="#" type="button" class="btn btn-info btn-floating card-link home-btn">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        Movie-Zone </a>
                 </div>
             </div>
             <!-- Single card 2 end -->
@@ -103,8 +129,12 @@
                     </ul>
 
                     <div class="card-body">
-                        <a href="#" class="btn btn-success btn-floating card-link" id="buy-now-btn">Buy Now</a>
-                        <a href="#" class="btn btn-info btn-floating card-link home-btn">Return to Home</a>
+                        <a href="#" class="btn btn-success btn-floating card-link" id="buy-now-btn">
+                            <i class="fa fa-film" aria-hidden="true"> </i>
+                            Buy Now</a>
+                        <a href="#" class="btn btn-info btn-floating card-link home-btn">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            Movie-Zone </a>
                     </div>
                 </div>
             </div><!-- Single card 3 end -->

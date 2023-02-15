@@ -108,22 +108,15 @@ footer{
   transition: all 0.8s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                    7px 7px 20px 0px rgba(0,0,0,.1),
+                    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
 }
 
 .btn-footer {
   background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(253,75,7,1) 100%);  
-  }    
-
-  .btn-footer span {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
+  }  
 
   .btn-footer:before,
   .btn-footer:after {
@@ -133,10 +126,10 @@ footer{
     bottom: 0;
     background: rgba(253,75,7,1);
     box-shadow:
-     -7px -7px 20px 0px rgba(255,255,255,.9),
-     -4px -4px 5px 0px rgba(255,255,255,.9),
-     7px 7px 20px 0px rgba(0,0,0,.2),
-     4px 4px 5px 0px rgba(0,0,0,.3);
+            -7px -7px 20px 0px rgba(255,255,255,.9),
+            -4px -4px 5px 0px rgba(255,255,255,.9),
+             7px 7px 20px 0px rgba(0,0,0,.2),
+             4px 4px 5px 0px rgba(0,0,0,.3);
     transition: all 0.5s ease;
   }
 
@@ -151,9 +144,12 @@ footer{
   }
 
   .btn-footer:hover{
-    color: rgba(253,75,7,1);
-    background: transparent;
-  }
+    background: transparent;    
+  } 
+
+  i:hover{   
+    color: rgba(253,75,7,1) !important;
+  } 
 
   .btn-footer:hover:before {
     height: 100%;
@@ -161,42 +157,10 @@ footer{
 
   .btn-footer:hover:after {
     width: 100%;
-  }
+    }            
 
-  .btn-footer span:before,
-  .btn-footer span:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    background: rgba(253,75,7,1);
-    box-shadow:
-     -7px -7px 20px 0px rgba(255,255,255,.9),
-     -4px -4px 5px 0px rgba(255,255,255,.9),
-     7px 7px 20px 0px rgba(0,0,0,.2),
-     4px 4px 5px 0px rgba(0,0,0,.3);
-    transition: all 0.5s ease;
-  }
-
-  .btn-footer span:before {
-    width: 2px;
-    height: 0%;
-  }
-
-  .btn-footer span:after {
-    height: 2px;
-    width: 0%;
-  }
-
-  .btn-footer span:hover:before {
-    height: 100%;
-  }
-
-  .btn-footer span:hover:after {
-    width: 100%;
-  }
   
-/* --------- Footer button end ---------- *
+ /* --------- Footer button end ---------- */
 
 
 
