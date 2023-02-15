@@ -1,7 +1,7 @@
-
-:root{
+:root {
   font-size: 80%;
 }
+
 
  /* additional fonts for title display */ 
 @import url(//db.onlinewebfonts.com/c/24a4b50e6d1b19606aab9c11c66535ca?family=BassetRR);
@@ -13,55 +13,65 @@
   url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.svg#BassetRR") format("svg"); }
 
 
-/* -------------- NAV container ------------------ */ 
 
+/* additional fonts for title display - end */
 
-.navbar-brand h1{
-font-family: "BassetRR";
-font-size: 700%;
+/* -------------- NAV container ------------------ */
+
+.navbar-brand h1 {
+  font-family: "BassetRR";
+  font-size: 700%;
 }
 
-#movie-year{
-font-family: "BassetRR";
-font-size: 400%;
+#movie-year {
+  font-family: "BassetRR";
+  font-size: 400%;
 }
+
 
 .customNAV{
+
   width: 100%;
   background-image: linear-gradient(
     to top,
     rgb(233, 75, 7),
+
     rgba(224, 83, 18, 0.437) );  
   background-size: cover;  
   z-index: 10;       
 } 
 
-/* -------------- NAV container  end ------------------ */ 
 
-main{
-  background-image:url("../Images/sunset-g020ebf7f3_1920.jpg");
-  background-size:cover;
+/* -------------- NAV container  end ------------------ */
+
+main {
+  background-image: url("../Images/sunset-g020ebf7f3_1920.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
-
-/* ---------- cards container ------------ */ 
+/* ---------- cards container ------------ */
 
 .cards-container {
-  width: 80% !important; 
+  width: 80% !important;
   column-gap: 5%;
   height: 600px;
   height: calc(100vh - 25px);
-  display:flex;
+  display: flex;
   position: relative;
-  align-items: center;  /* long cards: align-items: normal */
+  align-items: center; /* long cards: align-items: normal */
   justify-content: space-evenly;
+
+
   padding: 5rem;     
+
 }
 
 .btn {
-  cursor: pointer !important;  
+  cursor: pointer !important;
 }
+
+
 
 /* ---------------------- cards ---------------- */ 
 img .supplier-logo { 
@@ -70,15 +80,19 @@ img .supplier-logo {
   background-color: white;    
 } 
 
+
 .sub-container {
-  width: 30rem;  
+  width: 30rem;
   border-radius: 2rem;
+
+
   border-color: black !important; 
   align-content: space-around; 
+
 }
 
-
 /* -------------------- footer ---------------------- */
+
 footer{
   background-color: rgba(242, 105, 19, 0.952);
   border-top: 0.5rem;    
@@ -93,28 +107,37 @@ footer{
 .footer-cards-container { 
   column-gap: 5%; 
   display:flex;
+
   position: relative;
-  align-items: center; 
+  align-items: center;
   justify-content: space-evenly;
+
   padding: 0,5rem;
   padding-top: 0,3rem;
   padding-bottom: 0,3rem;    
+
 }
 
-/* ----------- footer button  ------------ */ 
+/* ----------- footer button  ------------ */
+
 
 .custom-btn {     
+
   background: transparent;
   transition: all 0.8s ease;
   position: relative;
   display: inline-block;
+
+
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
                     7px 7px 20px 0px rgba(0,0,0,.1),
                     4px 4px 5px 0px rgba(0,0,0,.1);
+
   outline: none;
 }
 
 .btn-footer {
+
   background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(253,75,7,1) 100%);  
   }  
 
@@ -164,7 +187,9 @@ footer{
 
 
 
-/* ------------------- media Query -------------------- */ 
+
+/* ------------------- media Query -------------------- */
+
 
 /* ---------------------- 1024 ------------------------- */
 @media screen and (max-width: 1024px) {           
@@ -172,15 +197,16 @@ footer{
   .navbar-brand h1{
     font-size: 300%;
     
+
   }
 
   .container {
-     flex-direction: column !important; 
-     nav-down: auto;
- }
-
+    flex-direction: column !important;
+    nav-down: auto;
+  }
 
   .card {
+
   flex-basis: 100%;  
   min-width: auto;
   margin: 5px !important;
@@ -215,7 +241,14 @@ footer{
 
   .footer-cards-container{
   justify-content:normal; 
+
   }
+
+  .cards-container {
+    justify-content: normal;
+    height: auto;
+  }
+
 
 
   .sub-container{
@@ -230,4 +263,8 @@ footer{
     font-size:x-large;
   }    
 
+
+  .display-4 {
+    font-size: x-large;
+  }
 }
