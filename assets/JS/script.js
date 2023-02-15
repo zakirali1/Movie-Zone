@@ -27,6 +27,7 @@ function getMovie(movieTitle) {
     console.log(response.Ratings[0].Source);
 
     localStorage.setItem("Year", response.Year)
+    localStorage.setItem("Movie", response.Title)
 
     // <div class="row no-gutters">
     let div2 = $("<div>").addClass("row no-gutters rowContent");
