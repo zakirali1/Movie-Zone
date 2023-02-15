@@ -82,9 +82,8 @@ h1 {
 
 /*thumbs up, down and watch me buttons*/
 .fa-thumbs-up, .fa-thumbs-down, .click-me {
-  padding: 5px;
+  margin: 10px;
 }
-
 
 /* modal param */
 
