@@ -38,7 +38,7 @@ function getMovie(movieTitle) {
     let col = $("<div>").addClass("col-md-4");
     div2.append(col);
     let poster = $("<img>")
-      .addClass("card-image-top")
+      .addClass("card-image-top img-fluid")
       .css({ height: "550px", width: "550px" })
       .attr("src", response.Poster);
     col.append(poster);
