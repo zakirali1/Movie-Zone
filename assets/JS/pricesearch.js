@@ -1,20 +1,27 @@
 var countryAbbr = (localStorage.getItem("country")).toLowerCase();
-var movieTitle = localStorage.getItem("searchInput");
-countryChosen;
+var movieTitle = localStorage.getItem("Movie");
+//var movieTitle = localStorage.getItem("searchInput");
+var searchYear = localStorage.getItem("Year");
+
+///ADDED SOME MOVIES YEAR IS STORED WITH AN HYPHEN
+var yearSelected = searchYear.substring(0, 4);
 
 ///CONVERT THE STRING INDIA TO 2 CHARACHER VALUE
+var countryChosen = "uk";
 if(countryAbbr == "india"){
     var  countryChosen = "in"
-}else{
+}else if(countryAbbr == "uk" || "us") {
     var countryChosen = countryAbbr;
-}
-console.log(countryChosen);
+}else{
+    countryChosen;
+};
 
 
 
-if(movieTitle !== " " || movieTitle !== null){
+if((movieTitle.length !== 0) && (movieTitle !== ";") && (movieTitle !== "@")){
+
     $(".cards-container").attr("hidden", false);
-
+    
     watchOptions(countryAbbr, movieTitle);
 
     ////FUNCTION TO SEARCH OPTIONS FOR BUY RENT OR STREAM FROM RAPID API
@@ -26,7 +33,7 @@ if(movieTitle !== " " || movieTitle !== null){
             "url": "https://where-can-i-watch1.p.rapidapi.com/search/" + countryChosen + "/" + movieTitle,
             "method": "GET",
             "headers": {
-                "X-RapidAPI-Key": "c628dd4553mshf06c082ec4e32f3p15c1d3jsnf0c281a0098d",
+                "X-RapidAPI-Key": "e66e20f6c5msh6733561e0cd98a7p16e8dbjsne70aa13f6496",
                 "X-RapidAPI-Host": "where-can-i-watch1.p.rapidapi.com"
             }
         };
@@ -42,10 +49,9 @@ if(movieTitle !== " " || movieTitle !== null){
                 
                 ///MOVIE DETAILS DISPLAY
                 if(
-                    movieTitle == ((movieTitleFound).toLowerCase()) ||
-                    movieTitle == ((movieTitleFound).toUpperCase()) ||
-                    movieTitle !== (";") ||
-                    movieTitle !== ("@")
+                    (movieTitle == ((movieTitleFound).toLowerCase()) && yearSelected == movieYear) ||
+                   (movieTitle == ((movieTitleFound).toUpperCase()) && yearSelected == movieYear) ||
+                   (movieTitle.includes(movieTitleFound) && yearSelected == movieYear)
                     )
                     {
                     ///DISPLAYING MOVIE TITLE
@@ -141,6 +147,7 @@ if(movieTitle !== " " || movieTitle !== null){
     };
 }
 else{
+    console.log(" yes is empty of null");
     noMovieFound();
 }
 

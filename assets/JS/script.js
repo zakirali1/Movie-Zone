@@ -31,6 +31,7 @@ function getMovie(movieTitle) {
 
     //  set local storage variables and values for use with pricerunner page
     localStorage.setItem("Year", response.Year)
+    localStorage.setItem("Movie", response.Title)
 
     // dynamic elements 
     let div2 = $("<div>").addClass("row no-gutters rowContent");
