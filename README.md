@@ -10,7 +10,7 @@ The Movie-Zone is a responsive front-end application that allows the user to sea
 When the Movie-Zone application is first opened, the user can see a navigation bar to choose their country and a search box to type in a movie title.
 On clicking the search button, the result is displayed below as a poster, movie title, short description and includes “like” and “watch now” buttons. 
 - The "like" button saves the movie details as a favourite which can then be accessed from the dropdown menu in the navigation bar.
-- The "watch now" button links to a second page displaying the location details of the movie such as on TV, streaming, renting, buying<br/>
+- The "watch now" button links to a second page displaying the location details of the movie such as on TV, streaming, renting and buying<br/>
 
 There is also a "subscribe" button which pops up a modal to enter your email address to be added to the Movie Zone mailing list for future updates.
 
@@ -52,6 +52,7 @@ https://github.com/zakirali1/Movie-Zone
 # Future Updates
 - The application will be updated to include new cinema released movies and screen locations.
 - To simplify the app so it's more user friendly, the results could be integrated to one page.
+- Additional countries can be added to become more universal
 <br/>
 
 

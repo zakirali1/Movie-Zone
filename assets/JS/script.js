@@ -2,17 +2,20 @@
 
 ////FUNCTION TO GET SEARCHED MOVIE USING OMDB-API
 
+// pull the latest values for favourites array from local storage
 let favs = JSON.parse(localStorage.getItem("favourites")) || [];
 
 
-
+// setting global variables for later use
 let title = $("#movieTitle");
 let desc = $("#content");
 let result;
+let currentVal;
 
+// core function to make the api call and get back resutls
 function getMovie(movieTitle) {
-  // $("#container").empty();
-  // $("#content").empty();
+  
+// empty dynamic elements first
   $("#wrapper").empty();
   var queryURL = "https://www.omdbapi.com/?t=" + movieTitle + "&apikey=trilogy";
 
@@ -26,10 +29,11 @@ function getMovie(movieTitle) {
 
     console.log(response.Ratings[0].Source);
 
+    //  set local storage variables and values for use with pricerunner page
     localStorage.setItem("Year", response.Year)
     localStorage.setItem("Movie", response.Title)
 
-    // <div class="row no-gutters">
+    // dynamic elements 
     let div2 = $("<div>").addClass("row no-gutters rowContent");
     let col = $("<div>").addClass("col-md-4");
     div2.append(col);
@@ -39,27 +43,13 @@ function getMovie(movieTitle) {
       .attr("src", response.Poster);
     col.append(poster);
     $("#wrapper").append(div2);
-    //       <div class="col-md-4">
-    //         <img class="card-img-top" src="./assets/Images/PvnA3o.jpg" alt="Card image cap">
-    //       </div>
-
-    // creating dynamic elements
-
-    //  let div1 = $("<div>").attr("id", "movie-details");
-    //  let head = $("<h5>").addClass("card-title").attr("id", "movie-title").text(response.Title);
-    //  let poster = $("<img>").addClass("card-image-top").attr("src", response.Poster);
-
-    //  appending dynamic elements to movie-title attribute
-    //  $("#movie-details").prepend(head, poster)
-    //     $("#wrapper").append(div1)
-
-    // call get ratings func
+   
     getRating(response);
   });
 }
 
 const getRating = (response) => {
-  //   <div class="col-md-8">
+  // dynamic elements creation
   let divs = $("<div>").addClass("col-md-8");
   $(".rowContent").append(divs);
   let div2 = $("<div>").addClass("card-body");
@@ -84,34 +74,14 @@ const getRating = (response) => {
   buttonHead.append(button1);
   divs.append(div2);
 
-  //   <div class="card-body">
-  //     <h4 class="card-title">Movie Title</h4>
-  //     <p class="card-text">Film description goes here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate amet beatae incidunt commodi nam officiis, fugiat nihil eveniet sapiente quaerat quo possimus, nesciunt facilis perferendis error autem molestias, itaque eaque.</p>
-  //     <p class="card-button"><button type="button" class="btn-sm btn-primary">Watch Now</button></p>
-  //   </div>
-  // </div>
-  // dynamically creating tags and attributes below
-
-  //  let contentDiv = $("<div>").attr("id", "content");
-
-  //   let header = $("<h2>").text("Plot: ")
-  //   let p = $("<p>").text(response.Plot);
-  //   let rating = $("<p>").text("Rating: " + response.Rated);
-  //   let like = $("<button>").attr("id", "thumbsUp");
-  //   let thumbsUp = $("<i>").addClass("far fa-thumbs-up").attr("id", "thumbsU");
-  //   like.append(thumbsUp)
-  //   let unlike = $("<button>").attr("id", "thumbsDown");
-  //   let thumbsDown = $("<i>").addClass("far fa-thumbs-down").attr("id", "thumbsD")
-  //   unlike.append(thumbsDown)
-  //   $("#content").append(header, p, rating);
-
+//   create a list of all ratings and scores from critics
   for (let i = 0; i < response.Ratings.length; i++) {
     let source = $("<p>").text(response.Ratings[i].Source);
     let val = $("<p>").text(response.Ratings[i].Value);
     $(".card-body").append(source, val, like, unlike, buttonHead);
   }
 
-  // $("#wrapper").append(contentDiv);
+  
 };
 
 // click function to callback getMovie function
@@ -125,18 +95,11 @@ $(".search-button").on("click", function (event) {
   // saving user input to local storage for manipulation later
   localStorage.setItem("searchInput", userInput);
 
-  // let userInputYear = $("#search-year").val().trim();
-  // console.log(userInput);
-  // console.log(userInputYear);
-
-  // saving user input to local storage for manipulation later
-
-  //  localStorage.setItem("searchYear", userInputYear),
-
   getMovie(userInput);
+
 });
 
-// let favs = JSON.parse(localStorage.getItem("favourites")) || [];
+// event handler for thumbs up click
 
 $(document).on("click", "#thumbsUp", function (e) {
 
@@ -145,11 +108,17 @@ $(document).on("click", "#thumbsUp", function (e) {
   .toLowerCase()
   .trim()
 
+  // change classes and look based on class status
   if ($("#thumbsU").hasClass("far fa-thumbs-up")) {
     $("#thumbsU").removeClass().addClass("fas fa-thumbs-up");
-    // favs.push(userIn)
-    // localStorage.setItem("favourites", JSON.stringify(favs))
-    voteUp(userIn)
+   
+    // if search box is not empty, use that to populate and call voteup
+    if (userIn) {
+      voteUp(userIn) 
+// else use the value of the dropdown anchor tags
+    } else if((currentVal))
+    voteUp(currentVal)
+
   } else {
     $("#thumbsU").removeClass().addClass("far fa-thumbs-up");
     // favs.splice(userIn, 1)
@@ -162,10 +131,16 @@ $(document).on("click", "#thumbsDown", function (e) {
   .val()
   .toLowerCase()
   .trim()
-
+ // change classes and look based on class status
   if ($("#thumbsD").hasClass("far fa-thumbs-down")) {
     $("#thumbsD").removeClass().addClass("fas fa-thumbs-down");
-   voteDown(userIn) 
+
+     // if search box is not empty, use that to populate and call voteup
+    if (userIn) {
+      voteDown(userIn) 
+// else use the value of the dropdown anchor tags
+    } else if((currentVal))
+    voteDown(currentVal)
    
   } else {
     $("#thumbsD").removeClass().addClass("far fa-thumbs-down");
@@ -181,41 +156,39 @@ $(".button5").on("click", function(e) {
   localStorage.setItem("country", country);
 });
 
+// redirect handler for second html page (price runner)
 $(document).on("click", ".click-me", function (e) {
  // window.location.href = "../../pricesearch.html";
  window.open("./pricesearch.html");
 });
 
 
-// modal logic
-
-// modal logic
-
-
-
+// if value doenst already exist in my local storage, push title to array and display in local storage
 const voteUp = userVal => {
   if (!favs.includes(userVal)) {
     favs.push(userVal)
     localStorage.setItem("favourites", JSON.stringify(favs))
     console.log(favs)
-
-  }
+    // reload the page to pull latest results
+    location.reload();
+  };
   
 };
 
+// if value already exists in localstorage then remove from array
 const voteDown = userVal => {
 
     if(favs.includes(userVal)) {
    let where = favs.indexOf(userVal)
    favs.splice(where, 1)
    localStorage.setItem("favourites", JSON.stringify(favs))
+   location.reload();
    
-   
-    }
+    };
   };
 
  
-
+// dynamic elements created for drop down list, based on user likes
   $(document).on("click", ".dropl", function() {
     let moviesL =  JSON.parse(localStorage.getItem("favourites"))
     // event.preventDefault()
@@ -226,19 +199,25 @@ const voteDown = userVal => {
         dropItems =  $("<a>").addClass("dropdown-item").attr("href", "#").text(element)
         dropmenu.append(dropItems)
         console.log(favs)
-    })
+        
+    });
   
-  
+    
 };
 
 
 });
 
+// grab the value of the anchor tag text and call back core function so user can use this as a shortcut for search
+$(document).on("click", ".dropdown-menu .dropdown-item", function(event) {
+  event.preventDefault()
+
+    currentVal = $(this).text().trim()
+    console.log(currentVal)
+  
+    getMovie(currentVal);
+    
 
 
-// dropFunc();
- 
-
-// $(".dropdown-toggle").on("click", dropFunc);
-
+});
 
