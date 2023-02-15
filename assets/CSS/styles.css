@@ -120,9 +120,9 @@ h1 {
   padding: 10px;
   box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.5);
   background: linear-gradient(
-    90deg,
-    rgba(253, 145, 29, 0.9640231092436975) 83%,
-    rgba(252, 142, 69, 0) 100%
+    360deg,
+    rgba(253, 119, 1, 1)    0%,          /* 83%, */
+    rgba(255,145,0,1)     83%                      /* (252, 142, 69, 0) 100% */
   );
 }
 
