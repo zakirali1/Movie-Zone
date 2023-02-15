@@ -1,43 +1,57 @@
-var countryAbbr = "uk";
-var movieTitle = localStorage.getItem("searchInput");
+var countryAbbr = (localStorage.getItem("country")).toLowerCase();
+var movieTitle = localStorage.getItem("Movie");
+//var movieTitle = localStorage.getItem("searchInput");
+var searchYear = localStorage.getItem("Year");
 
-if(movieTitle !== " " || movieTitle !== null){
+///ADDED SOME MOVIES YEAR IS STORED WITH AN HYPHEN
+var yearSelected = searchYear.substring(0, 4);
+
+///CONVERT THE STRING INDIA TO 2 CHARACHER VALUE
+var countryChosen = "uk";
+if(countryAbbr == "india"){
+    var  countryChosen = "in"
+}else if(countryAbbr == "uk" || "us") {
+    var countryChosen = countryAbbr;
+}else{
+    countryChosen;
+};
+
+
+
+if((movieTitle.length !== 0) && (movieTitle !== ";") && (movieTitle !== "@")){
+
     $(".cards-container").attr("hidden", false);
-
+    
     watchOptions(countryAbbr, movieTitle);
 
     ////FUNCTION TO SEARCH OPTIONS FOR BUY RENT OR STREAM FROM RAPID API
-    function watchOptions(countryAbbr, movieTitle){
+    function watchOptions(countryChosen, movieTitle){
 
         const settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://where-can-i-watch1.p.rapidapi.com/search/" + countryAbbr + "/" + movieTitle,
+            "url": "https://where-can-i-watch1.p.rapidapi.com/search/" + countryChosen + "/" + movieTitle,
             "method": "GET",
             "headers": {
-                "X-RapidAPI-Key": "3691323da3msha52c600432c258ep1e24aejsnfa409556ee45",
+                "X-RapidAPI-Key": "e66e20f6c5msh6733561e0cd98a7p16e8dbjsne70aa13f6496",
                 "X-RapidAPI-Host": "where-can-i-watch1.p.rapidapi.com"
             }
         };
         $.ajax(settings).done(function (movieData) {
 
-            console.log(movieData);
-
             for(let t = 0; t < movieData.length; t++){
 
                 var movieTitleFound = movieData[0].title;
                 var movieYear = movieData[0].year;
-                var options = movieData[0].options;
                 var buyOption = movieData[0].options.buy;
                 var rentOption = movieData[0].options.rent;
                 var streamOption = movieData[0].options.stream;
                 
                 ///MOVIE DETAILS DISPLAY
                 if(
-                    movieTitle == ((movieTitleFound).toLowerCase()) ||
-                    movieTitle == ((movieTitleFound).toUpperCase()) ||
-                    movieTitle !== (";") ||
-                    movieTitle !== ("@")
+                    (movieTitle == ((movieTitleFound).toLowerCase()) && yearSelected == movieYear) ||
+                   (movieTitle == ((movieTitleFound).toUpperCase()) && yearSelected == movieYear) ||
+                   (movieTitle.includes(movieTitleFound) && yearSelected == movieYear)
                     )
                     {
                     ///DISPLAYING MOVIE TITLE
@@ -45,7 +59,6 @@ if(movieTitle !== " " || movieTitle !== null){
                     $("#movie-year").text(movieYear);
 
                     ////DISPLAYING BUY OPTION LOGIC
-                    console.log(options);
                     if(buyOption){
                         $("#buy-card").attr("hidden", false);
                         
@@ -132,7 +145,9 @@ if(movieTitle !== " " || movieTitle !== null){
             };
         });
     };
-}else{
+}
+else{
+    console.log(" yes is empty of null");
     noMovieFound();
 }
 
@@ -140,3 +155,4 @@ function noMovieFound(){
     $("#movie-title").text("whoops! Nothing to Display");
     $(".cards-container").attr("hidden", true);
 }
+ 
