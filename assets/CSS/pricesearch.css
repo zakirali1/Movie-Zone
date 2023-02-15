@@ -1,279 +1,251 @@
-
-:root{
+:root {
   font-size: 80%;
 }
- /* additional fonts for title display */ 
+/* additional fonts for title display */
 @import url(//db.onlinewebfonts.com/c/24a4b50e6d1b19606aab9c11c66535ca?family=BassetRR);
 
-@font-face {font-family: "BassetRR"; src: url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot"); 
-  src: url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot?#iefix") format("embedded-opentype"), 
-  url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff") 
-  format("woff"), url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.ttf") format("truetype"), 
-  url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.svg#BassetRR") format("svg"); }
-
-  /* additional fonts for title display - end */ 
-
-/* -------------- NAV container ------------------ */ 
-
-
-.navbar-brand h1{
-font-family: "BassetRR";
-font-size: 700%;
+@font-face {
+  font-family: "BassetRR";
+  src: url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot");
+  src: url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.svg#BassetRR")
+      format("svg");
 }
 
-#movie-year{
-font-family: "BassetRR";
-font-size: 400%;
+/* additional fonts for title display - end */
+
+/* -------------- NAV container ------------------ */
+
+.navbar-brand h1 {
+  font-family: "BassetRR";
+  font-size: 700%;
 }
 
+#movie-year {
+  font-family: "BassetRR";
+  font-size: 400%;
+}
 
-.customNAV{
+.customNAV {
   width: 100%;
   background-image: linear-gradient(
     to top,
     rgb(233, 75, 7),
-    rgba(224, 83, 18, 0.437) );  
-  background-size: cover;  
+    rgba(224, 83, 18, 0.437)
+  );
+  background-size: cover;
   z-index: 10;
-       
-} 
+}
 
-/* -------------- NAV container  end ------------------ */ 
+/* -------------- NAV container  end ------------------ */
 
-main{
-  background-image:url("../Images/sunset-g020ebf7f3_1920.jpg");
-  background-size:cover;
+main {
+  background-image: url("../Images/sunset-g020ebf7f3_1920.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
-
-/* ---------- cards container ------------ */ 
+/* ---------- cards container ------------ */
 
 .cards-container {
-  width: 80% !important; 
+  width: 80% !important;
   column-gap: 5%;
   height: 600px;
   height: calc(100vh - 25px);
-  display:flex;
+  display: flex;
   position: relative;
-  align-items: center;  /* long cards: align-items: normal */
+  align-items: center; /* long cards: align-items: normal */
   justify-content: space-evenly;
-  padding: 5rem; 
-    
+  padding: 5rem;
 }
 
 .btn {
-  cursor: pointer !important;  
+  cursor: pointer !important;
 }
 
-
-
-/* ---------------------- cards ---------------- */ 
-img .supplier-logo { 
-  width:  10% !important;
-  height: 10% ;
-  background-color: white;     
-  
-} 
+/* ---------------------- cards ---------------- */
+img .supplier-logo {
+  width: 10% !important;
+  height: 10%;
+  background-color: white;
+}
 
 .sub-container {
-  width: 30rem;  
+  width: 30rem;
   border-radius: 2rem;
-  border-color: black !important; 
+  border-color: black !important;
 
-  align-content: space-around; 
-  
+  align-content: space-around;
 }
 
-
 /* -------------------- footer ---------------------- */
-footer{
-  
+footer {
   background-color: rgba(242, 105, 19, 0.952);
-  border-top: 0.5rem;    
-  border-color: solid rgba(190, 66, 8, 0.618);  
-  
+  border-top: 0.5rem;
+  border-color: solid rgba(190, 66, 8, 0.618);
 }
 
 .footer-cards-container {
- 
-  column-gap: 5%; 
-  display:flex;
+  column-gap: 5%;
+  display: flex;
   position: relative;
-  align-items: center; 
+  align-items: center;
   justify-content: space-evenly;
-  padding: 0,5rem;
-  padding-top: 0,3rem;
-  padding-bottom: 0,3rem;
-  
-    
+  padding: 0, 5rem;
+  padding-top: 0, 3rem;
+  padding-bottom: 0, 3rem;
 }
 
-/* ----------- footer button  ------------ */ 
+/* ----------- footer button  ------------ */
 
-.custom-btn { 
-    
+.custom-btn {
   background: transparent;
   transition: all 0.8s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
 }
 
-
-
 .btn-footer {
-  background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
-  }    
+  background: linear-gradient(
+    0deg,
+    rgba(255, 151, 0, 1) 0%,
+    rgba(251, 75, 2, 1) 100%
+  );
+}
 
-  .btn-footer span {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
+.btn-footer span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
-  .btn-footer:before,
-  .btn-footer:after {
-    position: absolute;
-    content: "";
-    right: 0;
-    bottom: 0;
-    background: rgba(251,75,2,1);
-    box-shadow:
-     -7px -7px 20px 0px rgba(255,255,255,.9),
-     -4px -4px 5px 0px rgba(255,255,255,.9),
-     7px 7px 20px 0px rgba(0,0,0,.2),
-     4px 4px 5px 0px rgba(0,0,0,.3);
-    transition: all 0.8s ease;
-  }
-  .btn-footer:before{
-     height: 0%;
-     width: 2px;
-     
-  }
-  .btn-footer:after {
-    width: 0%;
-    height: 2px;
-  }
-  .btn-footer:hover{
-    color: rgba(251,75,2,1);
-    background: transparent;
-  }
-  .btn-footer:hover:before {
-    height: 100%;
-  }
-  .btn-footer:hover:after {
-    width: 100%;
-  }
-  .btn-footer span:before,
-  .btn-footer span:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    background: rgba(251,75,2,1);
-    box-shadow:
-     -7px -7px 20px 0px rgba(255,255,255,.9),
-     -4px -4px 5px 0px rgba(255,255,255,.9),
-     7px 7px 20px 0px rgba(0,0,0,.2),
-     4px 4px 5px 0px rgba(0,0,0,.3);
-    transition: all 0.8s ease;
-  }
-  .btn-footer span:before {
-    width: 2px;
-    height: 0%;
-  }
-  .btn-footer span:after {
-    height: 2px;
-    width: 0%;
-  }
-  .btn-footer span:hover:before {
-    height: 100%;
-  }
-  .btn-footer span:hover:after {
-    width: 100%;
-  }
-  
+.btn-footer:before,
+.btn-footer:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: rgba(251, 75, 2, 1);
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
+    -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.8s ease;
+}
+.btn-footer:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-footer:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-footer:hover {
+  color: rgba(251, 75, 2, 1);
+  background: transparent;
+}
+.btn-footer:hover:before {
+  height: 100%;
+}
+.btn-footer:hover:after {
+  width: 100%;
+}
+.btn-footer span:before,
+.btn-footer span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: rgba(251, 75, 2, 1);
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
+    -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.8s ease;
+}
+.btn-footer span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-footer span:after {
+  height: 2px;
+  width: 0%;
+}
+.btn-footer span:hover:before {
+  height: 100%;
+}
+.btn-footer span:hover:after {
+  width: 100%;
+}
+
 /* --------- Footer button end ---------- *
 
 
 
-/* ------------------- media Query -------------------- */ 
+/* ------------------- media Query -------------------- */
 
-@media screen and (max-width: 1024px) {            /*  / 896- XR*/
- 
-  .navbar-brand h1{
-    
+@media screen and (max-width: 1024px) {
+  /*  / 896- XR*/
+
+  .navbar-brand h1 {
     font-size: 300%;
-    
-    }
+  }
 
   .container {
-     flex-direction: column !important; 
-     nav-down: auto;
- }
-
+    flex-direction: column !important;
+    nav-down: auto;
+  }
 
   .card {
-  flex-basis: 100%;  
-  min-width: auto;
-  margin: 5px !important;
-
-} 
-
+    flex-basis: 100%;
+    min-width: auto;
+    margin: 5px !important;
+  }
 }
 
-
-@media screen and (max-width:576px){
-
-  
-  .navbar-brand h1{
+@media screen and (max-width: 576px) {
+  .navbar-brand h1 {
     font-family: "BassetRR";
-    font-size:xx-large ;
-     }
-    
-    #movie-year{
+    font-size: xx-large;
+  }
+
+  #movie-year {
     font-family: "BassetRR";
     font-size: large;
-     }
+  }
 
-     .customNAV{
-      flex-direction: column;
-      align-items: center;
+  .customNAV {
+    flex-direction: column;
+    align-items: center;
+  }
 
-     }
+  .cards-container {
+    justify-content: normal;
+    height: auto;
+  }
 
-     .cards-container {
-      justify-content:normal; 
-      height: auto;
-  
-     }
+  .footer-cards-container {
+    justify-content: normal;
+  }
 
-     .footer-cards-container{
-      justify-content:normal; 
-     }
+  .sub-container {
+    width: 25rem;
+  }
 
+  .card {
+    flex-basis: 80%;
+  }
 
-     .sub-container{
-     width: 25rem;
-     }
-
-     .card {
-      flex-basis: 80%;  
-    } 
-
-    .display-4{
-      font-size:x-large;
-    }
-
-
-
-    
-
-    
-
+  .display-4 {
+    font-size: x-large;
+  }
 }
