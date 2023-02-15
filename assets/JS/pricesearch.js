@@ -139,7 +139,7 @@ if((movieTitle.length !== 0) && (movieTitle !== ";") && (movieTitle !== "@")){
                     var homeBtn = $(".home-btn");
 
                     homeBtn.on("click", function(){
-                        window.location.href = "index_1.html";
+                        window.location.href = "index.html";
                     });
                 };
             };
