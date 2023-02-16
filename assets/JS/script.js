@@ -99,6 +99,8 @@ $(".search-button").on("click", function (event) {
 
 });
 
+// --------- button enchancement ------------------------------ // 
+
 // event handler for thumbs up click
 
 $(document).on("click", "#thumbsUp", function (e) {
@@ -109,8 +111,55 @@ $(document).on("click", "#thumbsUp", function (e) {
   .trim()
 
   // change classes and look based on class status
+  if ($("#thumbsD").hasClass("fas") || $("#thumbsU").hasClass("far")) {
+      $("#thumbsD").removeClass("fas redIcon").addClass("far");
+      $("#thumbsU").addClass("greenIcon fas fa-thumbs-up ");
+
+          // if search box is not empty, use that to populate and call voteup
+          if (userIn) {
+          voteUp(userIn) 
+        
+          // else use the value of the dropdown anchor tags
+          } else if((currentVal))
+          voteUp(currentVal)
+          
+  } else {
+  $("#thumbsU").removeClass().addClass(" fas greenIcon fa-thumbs-up"); // ?
+ 
+}
+});
+
+// event handler for thumbs down click
+$(document).on("click", "#thumbsDown", function (e) {
+ 
+  let userIn = $("#search-box")
+  .val()
+  .toLowerCase()
+  .trim()
+ // change classes and look based on class status
+ if ($("#thumbsU").hasClass("fas")|| $("#thumbsD").hasClass("far"))  { // || $("#thumbsD").hasClass("fas fa-thumbs-down "))
+    $("#thumbsU").removeClass("fas greenIcon").addClass("far");
+    $("#thumbsD").addClass(" fas redIcon");
+   
+    // if search box is not empty, use that to populate and call voteup
+    if (userIn) {
+    voteDown(userIn) 
+    // else use the value of the dropdown anchor tags
+    } else if((currentVal))
+    voteDown(currentVal)  
+     
+  
+   } else {
+    $("#thumbsD").addClass("fas fa-thumbs-down ");
+
+  }
+}); 
+
+// ----------------- can be removed after review ----------------- //
+  /*
+  // change classes and look based on class status
   if ($("#thumbsU").hasClass("far fa-thumbs-up")) {
-    $("#thumbsU").removeClass().addClass("fas fa-thumbs-up");
+    $("#thumbsU").addClass("greenIcon fas fa-thumbs-up ");
    
     // if search box is not empty, use that to populate and call voteup
     if (userIn) {
@@ -120,10 +169,12 @@ $(document).on("click", "#thumbsUp", function (e) {
     voteUp(currentVal)
 
   } else {
-    $("#thumbsU").removeClass().addClass("far fa-thumbs-up");
+    $("#thumbsU").removeClass().addClass(" fas greenIcon fa-thumbs-up");
     // favs.splice(userIn, 1)
   }
 });
+
+ 
 
 $(document).on("click", "#thumbsDown", function (e) {
  
@@ -133,7 +184,7 @@ $(document).on("click", "#thumbsDown", function (e) {
   .trim()
  // change classes and look based on class status
   if ($("#thumbsD").hasClass("far fa-thumbs-down")) {
-    $("#thumbsD").removeClass().addClass("fas fa-thumbs-down");
+    $("#thumbsD").removeClass().addClass("fas redIcon fa-thumbs-down");
 
      // if search box is not empty, use that to populate and call voteup
     if (userIn) {
@@ -143,9 +194,14 @@ $(document).on("click", "#thumbsDown", function (e) {
     voteDown(currentVal)
    
   } else {
-    $("#thumbsD").removeClass().addClass("far fa-thumbs-down");
+    $("#thumbsD").removeClass().addClass("fas redIcon fa-thumbs-down");
   }
 });
+
+*/
+
+// --------------------------------------------------------------- //
+
 
 $(".button5").on("click", function(e) {
   // $(this).data("country");

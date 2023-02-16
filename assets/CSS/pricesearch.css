@@ -6,11 +6,11 @@
  /* additional fonts for title display */ 
 @import url(//db.onlinewebfonts.com/c/24a4b50e6d1b19606aab9c11c66535ca?family=BassetRR);
 
-@font-face {font-family: "BassetRR"; src: url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot"); 
-  src: url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot?#iefix") format("embedded-opentype"), 
-  url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff") 
-  format("woff"), url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.ttf") format("truetype"), 
-  url("//db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.svg#BassetRR") format("svg"); }
+@font-face {font-family: "BassetRR"; src: url("https://db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot"); 
+  src: url("https://db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.eot?#iefix") format("embedded-opentype"), 
+  url("https://db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.woff") 
+  format("woff"), url("/https://db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.ttf") format("truetype"), 
+  url("/https://db.onlinewebfonts.com/t/24a4b50e6d1b19606aab9c11c66535ca.svg#BassetRR") format("svg"); }
 
 
 
