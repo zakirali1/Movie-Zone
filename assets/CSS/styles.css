@@ -142,7 +142,6 @@ h1 {
 }
 
 #thumbsUp {
-
   margin: 20px;
   padding: 10px;
 
@@ -159,10 +158,8 @@ h1 {
   }
 
   #thumbsDown {
-
   margin: 20px;
   padding: 10px;
-    
   border-radius: 10px;
   background: #e0e5ec; 
   justify-content: center;
@@ -181,7 +178,6 @@ h1 {
   font-size: 16px;
   color: rgba(42, 52, 84, 1);
   text-decoration: none;
-
   }
 
   #thumbsUp:active{
@@ -190,7 +186,6 @@ h1 {
       inset -4px -4px 6px 0 rgba(255,255,255,.5),
       inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
   }
-
 
   #thumbsDown:active{
   box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
@@ -206,25 +201,6 @@ h1 {
 .greenIcon{
   color:green !important;
 }
-
-
-
-  
-
-
-/*
-
-#thumbsUp {
-  margin: 20px;
-  padding: 10px;
-}
-#thumbsDown {
-  margin: 20px;
-  padding: 10px;
-}
-
- */
-
 
 /* modal param */
 .modal-btn {
