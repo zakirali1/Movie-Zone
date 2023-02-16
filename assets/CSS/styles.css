@@ -18,6 +18,7 @@ body {
   );
   background-size: cover;
 }
+
 /*jumbotron*/
 #search-box {
   position: relative;
@@ -68,6 +69,7 @@ h1 {
   padding-bottom: 20px;
   font-weight: 900;
 }
+
 /* search result card*/
 .search-para {
   padding-top: 15px;
@@ -82,33 +84,9 @@ h1 {
   color: black;
 }
 
-#content {
-  border-style: double;
-}
-
 .card {
   margin-top: 100px;
   color: black;
-}
-
-/*thumbs up, down and watch me buttons*/
-.fa-thumbs-up, .fa-thumbs-down, .click-me {
-  margin: 10px;
-}
-
-/* modal param */
-
-.modal-btn {
-  background-color: black;
-  border-width: 1px;
-  border-color: white;
-}
-
-.modal-content {
-  color: white;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card-image-top {
@@ -244,4 +222,20 @@ h1 {
   margin: 20px;
   padding: 10px;
 }
+
  */
+
+
+/* modal param */
+.modal-btn {
+  background-color: black;
+  border-width: 1px;
+  border-color: white;
+}
+
+.modal-content {
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

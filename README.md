@@ -22,14 +22,14 @@ The second page is presented as cards containing information and links to the  d
 
 # Demo
 
-![Movie-Zone index page](./README/mzpic1.png "Movie Zone Homepage screenshot")
+![Movie-Zone index page](./assets/README/mzpic1.png "Movie Zone Homepage screenshot")
 \
 \
-![Movie-Zone results page](./README/pricesearch_screenshot.jpg "Movie Zone Second page screenshot")
+![Movie-Zone results page](./assets/README/pricesearch_screenshot.jpg "Movie Zone Second page screenshot")
 \
 \
-See the live version of the Movie Zone App
-# -----INSERT LIVE LINK----
+See the live version of the Movie Zone App<br/>
+https://zakirali1.github.io/Movie-Zone<br/>
 
 Go behind the scenes<br/>
 https://github.com/zakirali1/Movie-Zone
@@ -53,7 +53,7 @@ Visit https://zakirali1.github.io/Movie-Zone
 - The application will be updated to include new cinema released movies and screen locations.
 - To simplify the app so it's more user friendly, the results could be integrated to one page.
 - Additional countries can be added to become more universal
-- A carousel which will feature more choices on the results page
+- Add a carousel which will feature more choices on the results page
 <br/>
 
 
