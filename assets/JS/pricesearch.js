@@ -33,7 +33,7 @@ if((movieTitle.length !== 0) && (movieTitle !== ";") && (movieTitle !== "@")){
             "url": "https://where-can-i-watch1.p.rapidapi.com/search/" + countryChosen + "/" + movieTitle,
             "method": "GET",
             "headers": {
-                "X-RapidAPI-Key": "e66e20f6c5msh6733561e0cd98a7p16e8dbjsne70aa13f6496",
+                "X-RapidAPI-Key": "c4158a487emsh9dffde584f9dc94p111d42jsn000dcef30cf5",
                 "X-RapidAPI-Host": "where-can-i-watch1.p.rapidapi.com"
             }
         };
