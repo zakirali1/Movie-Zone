@@ -1,9 +1,11 @@
 /// THIS SCRIPT IS ADDED TO THE INDEX_1.HTML
 
+
 ////FUNCTION TO GET SEARCHED MOVIE USING OMDB-API
 
 // pull the latest values for favourites array from local storage
 let favs = JSON.parse(localStorage.getItem("favourites")) || [];
+
 
 
 // setting global variables for later use
@@ -14,7 +16,7 @@ let currentVal;
 
 // core function to make the api call and get back resutls
 function getMovie(movieTitle) {
-  
+ 
 // empty dynamic elements first
   $("#wrapper").empty();
   var queryURL = "https://www.omdbapi.com/?t=" + movieTitle + "&apikey=trilogy";
@@ -104,7 +106,7 @@ $(".search-button").on("click", function (event) {
 // event handler for thumbs up click
 
 $(document).on("click", "#thumbsUp", function (e) {
-
+e.preventDefault()
   let userIn = $("#search-box")
   .val()
   .toLowerCase()
@@ -131,7 +133,8 @@ $(document).on("click", "#thumbsUp", function (e) {
 
 // event handler for thumbs down click
 $(document).on("click", "#thumbsDown", function (e) {
- 
+// e.preventDefault()
+
   let userIn = $("#search-box")
   .val()
   .toLowerCase()
@@ -219,42 +222,59 @@ $(document).on("click", ".click-me", function (e) {
 });
 
 
+
 // if value doenst already exist in my local storage, push title to array and display in local storage
 const voteUp = userVal => {
+ 
   if (!favs.includes(userVal)) {
     favs.push(userVal)
     localStorage.setItem("favourites", JSON.stringify(favs))
     console.log(favs)
+    
     // reload the page to pull latest results
     location.reload();
+    
   };
   
 };
 
+
+
 // if value already exists in localstorage then remove from array
 const voteDown = userVal => {
-
+  
     if(favs.includes(userVal)) {
+    
    let where = favs.indexOf(userVal)
    favs.splice(where, 1)
    localStorage.setItem("favourites", JSON.stringify(favs))
+ 
    location.reload();
-   
+ 
     };
+    
   };
 
  
+
+ 
+
+
 // dynamic elements created for drop down list, based on user likes
-  $(document).on("click", ".dropl", function() {
-    let moviesL =  JSON.parse(localStorage.getItem("favourites"))
-    // event.preventDefault()
+  $(document).on("click", ".dropl", function(event) {
+    favs =  JSON.parse(localStorage.getItem("favourites"))
+    event.preventDefault()
+  
+    // let moviesL =  JSON.parse(localStorage.getItem("favourites"))
+    console.log(favs)
     if($(this).hasClass(`show`)) {
       
       let dropmenu = $(".dropdown-menu.show");
-      moviesL.forEach(element => {
+      favs.forEach(element => {
         dropItems =  $("<a>").addClass("dropdown-item").attr("href", "#").text(element)
         dropmenu.append(dropItems)
-        console.log(favs)
+        // console.log(favs)
+        
         
     });
   
@@ -264,9 +284,13 @@ const voteDown = userVal => {
 
 });
 
+
+
+
+
 // grab the value of the anchor tag text and call back core function so user can use this as a shortcut for search
-$(document).on("click", ".dropdown-menu .dropdown-item", function(event) {
-  event.preventDefault()
+$(document).on("click", ".dropdown-menu .dropdown-item", function() {
+  // event.preventDefault()
 
     currentVal = $(this).text().trim()
     console.log(currentVal)
